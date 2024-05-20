@@ -11,7 +11,7 @@ type ChannelConfiguration map[string]string
 func getChannelsConfiguration() Configuration {
 	return Configuration{
 		"923113480184279090-923113480184279095": ChannelConfiguration{
-			"210128576526155777": "5466571",
+			"210128576526155777": "6196116", // "5466571",
 		},
 	}
 }

@@ -10,12 +10,14 @@ import (
 func TestCharacterAttributes(t *testing.T) {
 	t.Run("should pass", func(t *testing.T) {
 		kankaClient := kankalib.KankaClient{
-			Token: os.Getenv("SHEET_DISCORD_TOKEN"),
+			Token:   os.Getenv("SHEET_DISCORD_TOKEN"),
 			Campain: "217781",
 		}
 		res, err := ShowSheet{
 			KankaClient: kankaClient,
-		}.execute("5466571")
+			ServerId: "923113480184279090",
+			ChannelId: "923113480184279095",
+		}.execute("210128576526155777")
 		if err != nil {
 			t.Fatal(err.Error())
 		}
@@ -29,12 +31,14 @@ func TestCharacterAttributes(t *testing.T) {
 func TestCharacterRoll(t *testing.T) {
 	t.Run("should pass", func(t *testing.T) {
 		kankaClient := kankalib.KankaClient{
-			Token: os.Getenv("SHEET_DISCORD_TOKEN"),
+			Token:   os.Getenv("SHEET_DISCORD_TOKEN"),
 			Campain: "217781",
 		}
 		res, err := MakeRoll{
 			KankaClient: kankaClient,
-		}.execute("5466571", "Perception")
+			ServerId: "923113480184279090",
+			ChannelId: "923113480184279095",
+		}.execute("210128576526155777", "Perception")
 		if err != nil {
 			t.Fatal(err.Error())
 		}
